@@ -123,8 +123,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="TestFile-01.txt" />
-    <Resource Include="TextFile-02.txt" />
+    <Resource Include="TestFiles\TestFile-01.txt" />
+    <Resource Include="TestFiles\TestFile-02.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
