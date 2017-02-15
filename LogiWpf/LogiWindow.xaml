@@ -1,0 +1,47 @@
+﻿<Window x:Class="LogiWpf.LogiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogiWpf"
+        xmlns:converters="clr-namespace:LogiWpf.Converters"
+        mc:Ignorable="d" SizeToContent="WidthAndHeight"
+        Title="LogiWindow">
+    <Window.Resources>
+        <DataTemplate x:Key="CellTemplate">
+            <Grid Background="White">
+                <Border Height="20" Width="20" BorderBrush="Gray" BorderThickness="1" Background="Black">
+                </Border>
+                <Border Height="20" Width="20" BorderBrush="White" BorderThickness="1" Background="White"
+                        Visibility="{Binding CellType, Converter={x:Static converters:CellTypeVisibilityConverter.Current}, ConverterParameter=Nothing}">
+                </Border>
+                <Border Height="20" Width="20" BorderBrush="Gray" BorderThickness="1" Background="White"
+                        Visibility="{Binding CellType, Converter={x:Static converters:CellTypeVisibilityConverter.Current}, ConverterParameter=Empty}">
+                </Border>
+                <Border Height="20" Width="20" BorderBrush="White" BorderThickness="1" Background="White"
+                        Visibility="{Binding CellType, Converter={x:Static converters:CellTypeVisibilityConverter.Current}, ConverterParameter=Digit}">
+                    <TextBlock Text="{Binding Digit}" FontWeight="Bold" Foreground="Black"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="RowTemplate">
+            <ItemsControl ItemsSource="{Binding Cells}" ItemTemplate="{StaticResource CellTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="{Binding Count}" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ItemsControl ItemsSource="{Binding Rows}" ItemTemplate="{StaticResource RowTemplate}" Margin="15">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="{Binding Count}" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </Grid>
+</Window>
