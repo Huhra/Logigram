@@ -29,6 +29,13 @@ namespace LogiWpf.Parser
             ParseLines(lines);
         }
 
+        public LogiParser(List<CellModel> horizontal, List<CellModel> verticals)
+        {
+            _horizontalLines = horizontal;
+            _verticalLines = verticals;
+            FillContent();
+        }
+
         private void ParseLines(string[] lines)
         {
             int lineNumber = 0;

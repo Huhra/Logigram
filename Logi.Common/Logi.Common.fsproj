@@ -5,14 +5,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>c3b5dd0a-dba1-4def-90d1-ed5ab905d3eb</ProjectGuid>
+    <ProjectGuid>822682c8-2a42-4183-98b5-133ac2d52a58</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>LogiAlgo</RootNamespace>
-    <AssemblyName>LogiAlgo</AssemblyName>
+    <RootNamespace>Logi.Common</RootNamespace>
+    <AssemblyName>Logi.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Name>LogiAlgo</Name>
+    <Name>Logi.Common</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +22,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\LogiAlgo.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Logi.Common.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,7 +31,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\LogiAlgo.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Logi.Common.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -44,15 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Library1.fs" />
-    <Compile Include="Puzzles.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Logi.Common\Logi.Common.fsproj">
-      <Name>Logi.Common</Name>
-      <Project>{822682c8-2a42-4183-98b5-133ac2d52a58}</Project>
-      <Private>True</Private>
-    </ProjectReference>
+    <Compile Include="Models.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

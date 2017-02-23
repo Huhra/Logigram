@@ -15,6 +15,11 @@
                 <Border Height="20" Width="20" BorderBrush="White" BorderThickness="1" Background="White"
                         Visibility="{Binding CellType, Converter={x:Static converters:CellTypeVisibilityConverter.Current}, ConverterParameter=Nothing}">
                 </Border>
+                <Border Height="20" Width="20" BorderBrush="White" BorderThickness="1" Background="LightGray"
+                        Visibility="{Binding CellType, Converter={x:Static converters:CellTypeVisibilityConverter.Current}, ConverterParameter=Unknown}">
+                    <TextBlock Text="?" FontWeight="Bold" Foreground="Black"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
                 <Border Height="20" Width="20" BorderBrush="Gray" BorderThickness="1" Background="White"
                         Visibility="{Binding CellType, Converter={x:Static converters:CellTypeVisibilityConverter.Current}, ConverterParameter=Empty}">
                 </Border>

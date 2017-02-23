@@ -38,6 +38,7 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
@@ -125,6 +126,16 @@
   <ItemGroup>
     <Resource Include="TestFiles\TestFile-01.txt" />
     <Resource Include="TestFiles\TestFile-02.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logi.Common\Logi.Common.fsproj">
+      <Project>{822682c8-2a42-4183-98b5-133ac2d52a58}</Project>
+      <Name>Logi.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogiAlgo\LogiAlgo.fsproj">
+      <Project>{c3b5dd0a-dba1-4def-90d1-ed5ab905d3eb}</Project>
+      <Name>LogiAlgo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

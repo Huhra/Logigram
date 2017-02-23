@@ -7,7 +7,7 @@ namespace LogiWpf.ViewModels
     public class LogiWindowViewModel : BindableBase
     {
         public List<CellRow> Rows { get; }
-        public int Count { get { return Rows.Count; } }
+        public int Count => Rows.Count;
 
         public LogiWindowViewModel(List<List<CellModel>> cellLists)
         {

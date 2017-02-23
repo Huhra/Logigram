@@ -7,5 +7,6 @@ namespace LogiWpf.Models
         Filled,
         Empty,
         Digit,
+        Unknown,
     }
 }
